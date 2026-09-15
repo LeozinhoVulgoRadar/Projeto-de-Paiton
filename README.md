@@ -1,2 +1,5 @@
-# Projeto-de-Paiton
-joguinho em paitom apenas
+# SpaceInvaders
+
+**Integrantes:**
+* Abner G.
+* Leonardo S. Cipriano
