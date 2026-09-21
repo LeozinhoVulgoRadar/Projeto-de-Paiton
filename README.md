@@ -10,7 +10,7 @@ Um jogo inspirado no clássico Space Invaders, mantendo as mesmas mecânicas e o
 ---
 
 ## Objetivo do Jogo
-Eliminar todas as naves inimigas antes que elas consigam avançar e alcançar a linha limite do jogador.
+Atingir o alvo com seu projétil antes que elas consigam avançar e alcançar a linha limite do jogador.
 
 ## Como Jogar
 * Seta para a Esquerda / Direita: Movimenta a nave do jogador.
