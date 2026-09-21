@@ -37,7 +37,7 @@ Para rodar este projeto localmente, você precisa ter o Python instalado e a bib
 1. Instale o Pygame:
    python -m pip install pygame-ce
 
-   O comando pip sozinho não estava mapeado nas Variáveis de Ambiente do seu sistema operacional, então utilizamos esse comando.
+   O comando pip sozinho não estava mapeado nas Variáveis de Ambiente do nosso sistema operacional, então utilizamos esse comando.
 
 3. Organização dos Arquivos:
    Certifique-se de que os arquivos de imagem do projeto estejam na mesma pasta do arquivo de código.
