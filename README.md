@@ -1,4 +1,4 @@
-# Space Invaders
+# World Invaders
 
 **Feito por:**
 * Abner G.
