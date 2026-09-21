@@ -5,7 +5,7 @@
 * Leonardo S. Cipriano
 
 **Tema:**
-Um jogo inspirado no clássico Space Invaders, mantendo as mesmas mecânicas e objetivos originais.
+Um jogo inspirado no clássico Space Invaders, mantendo as mesmas mecânicas e objetivos originais rs.
 
 ---
 
