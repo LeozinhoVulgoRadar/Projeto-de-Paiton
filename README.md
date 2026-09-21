@@ -43,3 +43,6 @@ Para rodar este projeto localmente, você precisa ter o Python instalado e a bib
 3. Execução:
    Execute o script principal via terminal:
    python seu_codigo.py
+
+
+## 67
