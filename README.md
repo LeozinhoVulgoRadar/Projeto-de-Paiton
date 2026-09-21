@@ -5,27 +5,41 @@
 * Leonardo S. Cipriano
 
 **Tema:**
-Um jogo inspirado no clássico *Space Invaders*, mantendo as mesmas mecânicas e objetivos.
+Um jogo inspirado no clássico Space Invaders, mantendo as mesmas mecânicas e objetivos originais.
 
 ---
 
-## Objetivo do Sistema
-Fazer o jogo funcionar integrando sons, imagens de cada elemento e a lógica do próprio código.
+## Objetivo do Jogo
+Eliminar todas as naves inimigas antes que elas consigam avançar e alcançar a linha limite do jogador.
 
-* **Interface e Visual:** Define a janela do jogo (800x600 pixels), limita a taxa de quadros a 60 FPS e carrega as imagens da nave do jogador (`player.png`), dos tiros (`bullet.png`), das naves inimigas (`enemy.png`) e do ícone.
-* **Mecânicas de Jogo:** Controla a movimentação de um lado para o outro com as setas do teclado e atira com a barra de espaço.
-* **Inimigos e Colisão:** Gera 6 naves inimigas que se movem de um lado para o outro e vão descendo aos poucos. O código calcula a distância entre os tiros e os inimigos usando matemática para registrar as *kills* e contar os pontos.
-* **Fim de Jogo:** Se qualquer inimigo passar da linha limite e chegar perto do jogador, as naves somem e a tela mostra que você perdeu antes de terminar.# SpaceInvaders
-
+## Como Jogar
+* Seta para a Esquerda / Direita: Movimenta a nave do jogador.
+* Barra de Espaço: Dispara os tiros contra os inimigos.
 
 ---
 
+## Funcionamento do Sistema
 
-## Como jogar?
+O jogo integra a biblioteca Pygame para renderizar gráficos em tempo real, gerenciar eventos do teclado e controlar a física do loop principal.
 
-* A-D para movimentação
-* ESPAÇO para atirar
+* Interface e Visual: Define uma janela de jogo com dimensões de 800x600 pixels e taxa de quadros limitada a 60 FPS (via pygame.time.Clock). O sistema carrega os elementos gráficos a partir de arquivos externos para o jogador, tiros, naves inimigas e o ícone da janela.
+* Mecânicas do Jogador: A nave possui movimentação horizontal limitada pelas bordas laterais da tela (entre as posições X 0 e 736), impedindo que o jogador saia do cenário. O disparo utiliza uma máquina de estados simples (ready e fire) para garantir que apenas um projétil seja disparado por vez.
+* Inimigos e Inteligência Artificial: São gerados 6 inimigos simultâneos em posições horizontais e verticais aleatórias. Eles se movem horizontalmente e, sempre que colidem com as paredes laterais da janela, invertem o sentido do movimento e descem 40 pixels em direção ao jogador.
+* Sistema de Colisão: O código utiliza a fórmula de distância euclidiana via teorema de Pitágoras (math.sqrt e math.pow) para calcular a aproximação exata entre o projétil e os inimigos. Caso a distância seja menor que 27 pixels, a colisão é confirmada, o inimigo ressurge no topo da tela e a pontuação aumenta.
+* Fim de Jogo: Caso qualquer uma das naves inimigas ultrapasse a coordenada vertical limite de 440 pixels, todos os inimigos são movidos para fora do mapa, a tela exibe a mensagem de derrota e a execução é encerrada.
 
-## Objetivo
+---
 
-* Eliminar os inimigos antes que eles alcancem a nave do jogador.
+## Pré-requisitos e Instalação
+
+Para rodar este projeto localmente, você precisa ter o Python instalado e a biblioteca pygame.
+
+1. Instale o Pygame:
+   pip install pygame
+
+2. Organização dos Arquivos:
+   Certifique-se de que os arquivos de imagem do projeto estejam na mesma pasta do arquivo de código.
+
+3. Execução:
+   Execute o script principal via terminal:
+   python seu_codigo.py
